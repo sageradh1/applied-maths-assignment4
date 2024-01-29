@@ -25,7 +25,9 @@ def define_dense_model_with_hidden_layer(input_length,
     hidden_layer_size: the number of neurons in the hidden layer
     output_length: the number of outputs (number of neurons in the output layer)"""
 
-    model = None
+    model = Sequential()
+    model.add(Dense(units=hidden_layer_size, input_dim=input_length, activation=activation_func_array[0]))    
+    model.add(Dense(units=output_length, activation=activation_func_array[1]))
     return model
 
 
