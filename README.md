@@ -1,6 +1,11 @@
 # Ex-4: Binary Classifier for MNIST
+## Solution Submission screenshots
+1. Commit pass
+![Alt text](<commit_pass.png>)
+2. Remote test pass
+![Alt text](<remote_pass.png>)
 
-## Overview
+## Task Overview
 In this exercise, you will implement a binary classifier to classify a single number from the MNIST dataset. You will be required to complete the functions provided in the Python files.
 
 ## Objectives
