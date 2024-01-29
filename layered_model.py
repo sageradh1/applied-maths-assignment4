@@ -50,7 +50,14 @@ def fit_mnist_model_single_digit(x_train, y_train, target_digit, model, epochs=1
 
     then fit the model on the training data. (pass the epochs and batch_size params)
     """
+    optimizer = Adam(learning_rate=0.001)
+    loss_function = 'binary_crossentropy'
+    metrics_list = ['accuracy']
+
+    model.compile(optimizer=optimizer, loss=loss_function, metrics=metrics_list,)
     y_train = binarize_labels(y_train, target_digit)
+    model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size)
+
     return model
 
 def evaluate_mnist_model_single_digit(x_test, y_test, target_digit, model):
